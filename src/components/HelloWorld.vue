@@ -47,7 +47,7 @@ export default {
   border-color: black;
 }
 .enter{
-  margin-left: 40vw;
+
   width: 5vw;
   height: 2vw;
   margin-top: 1.5vw;
