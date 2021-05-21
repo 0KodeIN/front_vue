@@ -10,8 +10,8 @@
     <p>Музеи</p>
   </section>
    <section class="search-container">
+     <input class="search" placeholder="Поиск">
      <img src="@/assets/img/search.png" class="search-img">
-     <button class="search"></button>
    </section>
 
   <button class="enter">Войти</button>
@@ -47,18 +47,19 @@ export default {
   border-color: black;
 }
 .enter{
-
   width: 5vw;
   height: 2vw;
   margin-top: 1.5vw;
-  margin-left: 5vw;
+  margin-left: 8vw;
   background: #FFFFFF;
+  border-radius: 20px;
 }
 .search{
   width: 12vw;
   height: 2vw;
   margin-top: 1.5vw;
   margin-left: 0.4vw;
+  border-radius: 20px;
 
   background: #FFFFFF;
 }
