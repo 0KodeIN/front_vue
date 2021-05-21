@@ -34,15 +34,15 @@ export default {
 }
 .navigation{
   width: 100%;
-  background: #F5F5F5;
+  background: rgba(207, 176, 159, 0.27);
   height: 5vw;
   display: flex;
 }
 .categories{
-  width: 60vw;
+  width: 50vw;
   display: flex;
   justify-content: space-between;
-  margin: 0 0 0 2vw;
+  margin: 0 0 0 5vw;
   padding-top: 2vw;
   border-color: black;
 }
@@ -51,6 +51,7 @@ export default {
   width: 5vw;
   height: 2vw;
   margin-top: 1.5vw;
+  margin-left: 5vw;
   background: #FFFFFF;
 }
 .search{
