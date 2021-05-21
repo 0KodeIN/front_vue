@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HelloWorld/>
+    <router-view/>
   </div>
 </template>
 
