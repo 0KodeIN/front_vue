@@ -1,7 +1,6 @@
 <template>
 <section class="post">
   {{info}}
-  saddasads
 </section>
 </template>
 

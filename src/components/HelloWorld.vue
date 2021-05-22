@@ -1,13 +1,13 @@
 <template>
 <header class="navigation">
   <section class="categories">
-    <p>Кино</p>
-    <p>Концерты</p>
-    <p>Спектакли</p>
-    <p>Выставки</p>
-    <p>Библиотеки</p>
-    <p>Фестивали</p>
-    <p>Музеи</p>
+    <a v-on:click="Count">Кино</a>
+    <a>Концерты</a>
+    <a>Спектакли</a>
+    <a>Выставки</a>
+    <a>Библиотеки</a>
+    <a>Фестивали</a>
+    <a>Музеи</a>
   </section>
    <section class="search-container">
      <input class="search" placeholder="Поиск">
@@ -20,6 +20,16 @@
 
 <script>
 export default {
+  data(){
+
+  },
+  methods: {
+    Count(){
+      let key = 2
+      console.log(key)
+    }
+  }
+
 
 }
 </script>
@@ -74,8 +84,10 @@ export default {
   margin-left: 5vw;
   width: 20vw;
 }
-p{
+a{
   font-weight: bold;
+  font-size: 8px;
+  cursor: pointer;
 }
 
 </style>
