@@ -16,7 +16,7 @@ export default {
   },
 
   mounted() {
-    axios.get('http://127.0.0.1:8000/api/posters')
+    axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
         .then(response => {
             this.info = response});
   }
