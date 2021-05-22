@@ -14,8 +14,7 @@
      <img src="@/assets/img/search.png" class="search-img">
    </section>
 
-  <button @click="$router.push('/About')" class="enter">войти</button>
-</header>
+  </header>
 </template>
 
 <script>
@@ -46,16 +45,7 @@ export default {
   padding-top: 2vw;
   border-color: black;
 }
-.enter{
-  width: 8vw;
-  height: 2.5vw;
-  margin-top: 1.5vw;
-  margin-left: 8vw;
-  background: #FFFFFF;
-  border-radius: 20px;
-  font-size: medium;
-  border:solid #ffffff;
-}
+
 .search{
   width: 12vw;
   height: 2vw;
