@@ -62,7 +62,9 @@ export default {
       }
 
 
-      axios('http://127.0.0.1:8000/api/posters-by-category/' + this.id);
+      axios('http://127.0.0.1:8000/api/posters-by-category/' + this.id)
+    .then(response => {
+        this.info = response});
     }
   }
 
