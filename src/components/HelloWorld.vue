@@ -8,6 +8,7 @@
     <a v-on:click="$root.Count">Библиотеки</a>
     <a v-on:click="$root.Count">Фестивали</a>
     <a v-on:click="$root.Count">Музеи</a>
+
   </section>
    <section class="search-container">
      <input class="search" placeholder="Поиск">
