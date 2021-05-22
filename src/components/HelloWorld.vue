@@ -1,13 +1,13 @@
 <template>
 <header class="navigation">
   <section class="categories">
-    <a v-on:click="test()">Кино</a>
-    <a v-on:click="Count">Концерты</a>
-    <a v-on:click="Count">Спектакли</a>
-    <a v-on:click="Count">Выставки</a>
-    <a v-on:click="Count">Библиотеки</a>
-    <a v-on:click="Count">Фестивали</a>
-    <a v-on:click="Count">Музеи</a>
+    <a v-on:click="$root.Count">Кино</a>
+    <a v-on:click="$root.Count">Концерты</a>
+    <a v-on:click="$root.Count">Спектакли</a>
+    <a v-on:click="$root.Count">Выставки</a>
+    <a v-on:click="$root.Count">Библиотеки</a>
+    <a v-on:click="$root.Count">Фестивали</a>
+    <a v-on:click="$root.Count">Музеи</a>
   </section>
    <section class="search-container">
      <input class="search" placeholder="Поиск">
@@ -31,7 +31,7 @@ export default {
 
   },
   methods: {
-    this.$root.test();
+
   }
 
 
