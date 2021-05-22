@@ -24,10 +24,10 @@ export default {
   },
   methods: {
     async getCards() {
-      let res = await fetch(this.$store.getters.GET_API_URL + 'posts')
+      let res = await fetch(this.$store.getters.GET_API_URL + 'posters')
       if (res.ok) {
         let json = await res.json();
-        this.cards = json
+        this.cards = json.results
       } else {
         alert("Ошибка HTTP: " + res.status);
       }
