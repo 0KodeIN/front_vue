@@ -14,7 +14,7 @@
      <img src="@/assets/img/search.png" class="search-img">
    </section>
 
-  <button class="enter">Войти</button>
+  <button @click="$router.push('/About')" class="enter">Войти</button>
 </header>
 </template>
 
