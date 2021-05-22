@@ -1,31 +1,32 @@
 <template>
-  <div class="main">
     <div class="wrapper">
     <div class="wrapper__photo">
-          фото
+          {{card.body}}
     </div>
       <div class="wrapper__main">
-        <p >название</p>
+        <p>{{ card.title }}</p>
         <div class="wrapper__main-two">
-          <p>дата</p>
+          <p>{{card.id}}</p>
           <p>адрес</p>
           <p>цена</p>
         </div>
-
-
-
       </div>
     </div>
-  </div>
 </template>
 <script>
 import Wrapper from "./Wrapper";
 export default {
   components: {Wrapper},
-  data(){
-    return{
+  props: {
+      card: {
+        type: Object,
+        required: true
+      },
+      data:{
+        type: Object,
+        required:true
+      }
 
-    }
 
   },
   methods:{
@@ -39,10 +40,14 @@ export default {
 <style>
 .main{
   display: flex;
+  flex-wrap: wrap;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
   background: azure;
+  text-align: center;
+  justify-content: space-around;
+
 }
 .wrapper{
   display: flex;
@@ -52,6 +57,9 @@ export default {
   flex-wrap: wrap;
   border-radius: 0 0 12px 12px;
   margin-top: 4vw;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+
 }
 
 .wrapper__photo{

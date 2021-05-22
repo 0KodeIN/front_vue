@@ -6,6 +6,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    apiUrl: 'https://jsonplaceholder.typicode.com/',
+    // apiUrl: 'http://127.0.0.1:8000/api/',
     posts: []
   },
   mutations: {
@@ -31,6 +33,7 @@ export default new Vuex.Store({
   getters: {
     POSTS(state){
       return state.posts
-    }
+    },
+    GET_API_URL: s => s.apiUrl
   }
 })
