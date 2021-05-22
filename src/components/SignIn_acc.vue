@@ -7,7 +7,7 @@
     </div>
     <div class="wrapper__btn">
     <button class="enter">Войти</button>
-    <button class="registration">Создать аккаунт</button>
+    <button class="registration">cоздать аккаунт</button>
   </div>
 
 
@@ -36,6 +36,7 @@ export default {
   }
   .wrapper__header{
     margin-top: 10px;
+    font-size: 36px;
   }
 
   .wrapper__input{
@@ -47,7 +48,7 @@ export default {
     border-radius: 14px;
     padding: 0 .7vw;
     outline: none;
-    margin-top: 50px;
+    margin-top: 30px;
     border: solid #FFFFFF;
   }
   .enter__password{
@@ -65,7 +66,7 @@ export default {
     border-radius: 10px;
     height: 40px;
     font-size: 20px;
-    text-align: center;
+    border: solid 1px #8d8888;
 
 
   }
@@ -74,6 +75,7 @@ export default {
     border-radius: 10px;
     margin-top: 5px;
     font-size: 16px;
+    border: solid 1px #8d8888;
   }
   .wrapper__btn{
 
