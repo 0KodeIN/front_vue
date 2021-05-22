@@ -10,7 +10,8 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import Dialog from '@/components/Dialog.vue'
-import SignIn from '@/components/SignIn.vue'
+import SignIn from '@/components/SignIn_acc.vue'
+import Registration from '@/components/Registration_acc.vue'
 
 
 export default {
@@ -18,7 +19,8 @@ export default {
   components: {
     HelloWorld,
     Dialog,
-    SignIn
+    SignIn,
+    Registration
 
   }
 }

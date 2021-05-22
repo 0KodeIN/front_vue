@@ -14,7 +14,7 @@
      <img src="@/assets/img/search.png" class="search-img">
    </section>
 
-  <button @click="$router.push('/About')" class="enter">Войти</button>
+  <button @click="$router.push('/About')" class="enter">войти</button>
 </header>
 </template>
 
@@ -47,12 +47,14 @@ export default {
   border-color: black;
 }
 .enter{
-  width: 5vw;
-  height: 2vw;
+  width: 8vw;
+  height: 2.5vw;
   margin-top: 1.5vw;
   margin-left: 8vw;
   background: #FFFFFF;
   border-radius: 20px;
+  font-size: medium;
+  border:solid #ffffff;
 }
 .search{
   width: 12vw;
@@ -60,6 +62,10 @@ export default {
   margin-top: 1.5vw;
   margin-left: 0.4vw;
   border-radius: 20px;
+  border: solid #FFFFFF;
+  padding: 0 .7vw;
+  outline: none;
+
 
   background: #FFFFFF;
 }
