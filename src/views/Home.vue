@@ -2,6 +2,7 @@
   <div class="home">
 
     <HelloWorld/>
+    <card/>
 
   </div>
 </template>
@@ -9,16 +10,16 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
-import SignIn from '@/components/SignIn_acc.vue'
-import Regist from '@/components/Registration.vue'
+import card from '@/components/card.vue'
+
 
 
 export default {
   name: 'Home',
   components: {
     HelloWorld,
-    SignIn,
-    Regist
+    card
+
 
   }
 }
