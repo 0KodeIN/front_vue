@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import axios from "axios";
 
 export default {
   data(){
@@ -43,7 +42,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .search-img{
-
   height: 2.2vw;
   margin-top: 1.5vw;
   margin-left: 2vw;
@@ -61,6 +59,7 @@ export default {
   margin: 0 0 0 5vw;
   padding-top: 2vw;
   border-color: black;
+  min-width: 800px;
 }
 .enter{
   width: 8vw;
@@ -94,5 +93,18 @@ a{
   font-weight: bold;
   cursor: pointer;
 }
+
+@media (max-width:1000px){
+  .categories{
+    display: none;
+  }
+  .enter{
+    justify-content: center;
+  }
+  .search-container{
+    justify-content: center;
+  }
+}
+
 
 </style>

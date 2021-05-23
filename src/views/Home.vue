@@ -2,8 +2,8 @@
   <div class="home">
     <HelloWorld/>
     <div class="main">
-    <card v-for="(card, index) in cards" :key="`card${index}`" :card="card"/>
-      </div>
+      <card v-for="(card, index) in cards" :key="`card${index}`" :card="card"/>
+    </div>
   </div>
 </template>
 
@@ -20,11 +20,26 @@ export default {
     }
   },
   mounted() {
-    this.getCards()
+    this.getAllCards()
+  },
+  watch: {
+    '$root.id'(event){
+      this.getCards(event);
+      // console.log('watch',event)
+    }
   },
   methods: {
-    async getCards() {
+    async getAllCards() {
       let res = await fetch(this.$store.getters.GET_API_URL + 'posters')
+      if (res.ok) {
+        let json = await res.json();
+        this.cards = json.results
+      } else {
+        alert("Ошибка HTTP: " + res.status);
+      }
+    },
+    async getCards(id) {
+      let res = await fetch(this.$store.getters.GET_API_URL + 'posters-by-category/' + id);
       if (res.ok) {
         let json = await res.json();
         this.cards = json.results

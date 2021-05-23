@@ -11,7 +11,7 @@ new Vue({
     store,
     data() {
         return {
-            id: 0,
+            id: '',
             info: null
         }
     },
@@ -33,12 +33,12 @@ new Vue({
             } else if (categoryName === 'Музеи') {
                 this.id = 7;
             }
+            // console.log(this.id);
 
-
-            axios('http://127.0.0.1:8000/api/posters-by-category/' + this.id)
-                .then(response => {
-                    this.info = response
-                });
+            // axios('http://127.0.0.1:8000/api/posters-by-category/' + this.id)
+            //     .then(response => {
+            //         this.info = response
+            //     });
         }
     },
     render: h => h(App)
