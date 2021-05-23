@@ -33,7 +33,7 @@ export default {
       let res = await fetch(this.$store.getters.GET_API_URL + 'posters')
       if (res.ok) {
         let json = await res.json();
-        this.cards = json.results
+        this.cards = json
       } else {
         alert("Ошибка HTTP: " + res.status);
       }

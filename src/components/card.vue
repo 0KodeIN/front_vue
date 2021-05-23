@@ -2,11 +2,23 @@
   <div class="wrapper">
     <img :src="(card.image) ? card.image: require('@/assets/img/not_img.png')" class="wrapper__photo">
     <div class="wrapper__main">
-      <p>{{ card.title }}</p>
+      <h1 class="header-card">{{ card.title }}</h1>
       <div class="wrapper__main-two">
-        <!--          <p>{{card.id}}</p>-->
-        <p>{{ card.address }}</p>
-        <p>{{ card.price }}</p>
+
+        <div class="wrap-address">
+          <div class="date-card">
+            <!--          <p>{{ dateFormat(card.date)}} </p>-->
+            <p>{{card.date.lower.slice(2,10)}} </p>
+            <p> {{card.date.lower.slice(11,19)}}</p>
+            <!--          <p>{{card.date.upper.slice(2,10)}}</p>-->
+            <!--          <p>{{card.date.upper.slice(11,19)}}</p>-->
+            <p class="address">{{ card.address }}</p>
+          </div>
+
+          <div class="price"><p class="price-text">{{ card.price }} ₽</p></div>
+        </div>
+
+
       </div>
     </div>
   </div>
@@ -30,14 +42,30 @@ export default {
 
   },
   methods: {
-    CardFor() {
-
-    }
   }
 
 }
 </script>
 <style>
+.wrap-address{
+  display: flex;
+  width: 100%;
+}
+.date-card{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+}
+.date-card p:nth-child(2){
+  margin-left: 1vw;
+
+}
+.header-card{
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+}
 .main {
   display: flex;
   flex-wrap: wrap;
@@ -51,11 +79,9 @@ export default {
 
 .wrapper {
   display: flex;
-  width: 20.625vw;
-  height: 20.021vw;
-  background: #bf7d2e;
+  width: 30.625vw;
+  height: 29.021vw;
   flex-wrap: wrap;
-  border-radius: 0 0 12px 12px;
   margin-top: 4vw;
   margin-left: 2.5vw;
   margin-right: 2.5vw;
@@ -64,21 +90,45 @@ export default {
 
 .wrapper__photo {
   display: flex;
-  width: 20.833vw;
-  height: 13.375vw;
+  width: 30.833vw;
+  height: 18.375vw;
   background: bisque;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
 .wrapper__main {
   display: flex;
   flex-direction: column;
-  width: 20.833vw;
-  height: 3.646vw;
+  width: 30.833vw;
+  height: 8.45vw;
   text-align: center;
+  /*margin-bottom: 2vw;*/
+  justify-content: space-between;
 }
 
 .wrapper__main-two {
+  margin-top: 0.5vw;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  color: #7f7f7f;
+
+}
+.price{
+  background-color: #202020;
+  color: white;
+  min-width: 6vw;
+  max-height: 1.5vw;
+  border-radius: 15px;
+  margin-left: 1vw;
+  padding: 0.5vw;
+  text-align: center;
+  /*margin-bottom: 5vw;*/
+}
+.address{
+  margin-right: auto;
+  text-align: left;
+  padding-right: 3vw;
 }
 </style>

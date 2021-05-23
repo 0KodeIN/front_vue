@@ -14,7 +14,6 @@
      <input class="search" placeholder="Поиск">
      <img src="@/assets/img/search.png" class="search-img">
    </section>
-  <button @click="$router.push('/About')" class="enter">войти</button>
 </header>
 
 </template>
@@ -48,9 +47,10 @@ export default {
 }
 .navigation{
   width: 100%;
-  background: rgba(207, 176, 159, 0.27);
+  //background: rgba(207, 176, 159, 0.27);
   height: 5vw;
   display: flex;
+  font-size: 20px;
 }
 .categories{
   width: 50vw;
@@ -62,14 +62,15 @@ export default {
   min-width: 800px;
 }
 .enter{
-  width: 8vw;
+  width: 10vw;
   height: 2.5vw;
   margin-top: 1.5vw;
   margin-left: 8vw;
-  background: #FFFFFF;
+  background: #fef339;
   border-radius: 20px;
-  font-size: medium;
+  font-size: 13px;
   border:solid #ffffff;
+
 }
 .search{
   width: 12vw;
